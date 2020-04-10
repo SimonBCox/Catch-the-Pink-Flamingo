@@ -1,0 +1,18 @@
+# total amount spent buying items (21,407)
+source="buy-clicks.csv" | stats sum(price)
+
+# number of unique items available to be purchased (6)
+source="buy-clicks.csv" | stats dc(buyId)
+
+# histogram of how many times each item is purchased
+source="buy-clicks.csv" | stats count(buyId) by buyId
+
+# histogram of how much money was made for each item
+source="buy-clicks.csv" | stats sum(price) by buyId
+
+# histogram of total amount of money spent by top 10 spending users
+source="buy-clicks.csv" | stats sum(price) by userId | sort 10 -sum(price)
+
+# get platform type and hit-ratio for top paying users with two queries
+source="user-session.csv" userId = "2229" OR userId = "12" OR userId = "471" | top platformType by userId
+source="game-clicks.csv" userId = "2229" OR userId = "12" OR userId = "471" | stats mean(isHit) by userId

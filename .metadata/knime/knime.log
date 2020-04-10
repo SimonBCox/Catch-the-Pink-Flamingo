@@ -1,0 +1,87 @@
+2020-04-06 10:45:54,610 : WARN  : main :  : Node : Excel Reader (XLS) : 2:1 : No source location provided! Please enter a valid location.
+2020-04-06 10:45:59,433 : WARN  : main :  : Node : File Reader : 2:1 : No Settings available.
+2020-04-06 10:49:53,983 : WARN  : main :  : Node : Color Manager : 2:2 : Selected column "platformType" with default nominal color mapping.
+2020-04-06 10:51:19,182 : WARN  : main :  : Node : Partitioning : 2:5 : No sampling method selected
+2020-04-06 10:55:10,424 : WARN  : main :  : Node : Decision Tree Learner : 2:6 : Guessing target column: "platformType".
+2020-04-06 10:55:10,431 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 10:55:10,433 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 10:55:10,433 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 10:55:11,878 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 10:55:11,878 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 10:55:11,879 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 10:55:47,919 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 10:55:47,919 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 10:55:47,920 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 10:57:02,839 : WARN  : KNIME-Worker-4-Color Manager 2:2 :  : Node : Color Manager : 2:2 : Selected column "platformType" with default nominal color mapping.
+2020-04-06 10:57:02,941 : WARN  : KNIME-Worker-6-Partitioning 2:5 :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 10:57:03,015 : WARN  : KNIME-Worker-5-Statistics 2:3 :  : Node : Statistics : 2:3 : Maximum number of unique possible values (1000) exceeds for column(s): "userSessionId","userId"
+2020-04-06 10:57:03,749 : WARN  : KNIME-Worker-4-Decision Tree Learner 2:6 :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 10:57:04,985 : WARN  : KNIME-Worker-12-Decision Tree Predictor 2:7 :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 10:57:05,179 : WARN  : KNIME-Worker-12-Decision Tree Predictor 2:7 :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:00:17,022 : WARN  : main :  : Node : Row Filter : 2:11 : No row filter specified
+2020-04-06 11:03:02,680 : WARN  : main :  : Node : Color Manager : 2:2 : Selected column "platformType" with default nominal color mapping.
+2020-04-06 11:03:02,683 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:03:02,684 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 11:03:02,685 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:04:13,541 : WARN  : main :  : Node : Numeric Binner (PMML) : 2:12 : No column select for binning.
+2020-04-06 11:04:17,114 : WARN  : main :  : Node : Color Manager : 2:2 : Selected column "platformType" with default nominal color mapping.
+2020-04-06 11:04:17,115 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:04:17,116 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 11:04:17,116 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:05:17,534 : WARN  : main :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:05:17,535 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:05:17,536 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 11:05:17,537 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:05:18,453 : WARN  : main :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:05:18,454 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:05:18,455 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 11:05:18,456 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:05:21,329 : WARN  : KNIME-Worker-15-Numeric Binner (PMML) 2:12 :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:05:50,501 : WARN  : main :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:05:50,502 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:05:50,503 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 11:05:50,504 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:05:52,161 : WARN  : main :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:05:52,162 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:05:52,163 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 11:05:52,164 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:05:54,215 : WARN  : KNIME-Worker-16-Numeric Binner (PMML) 2:12 :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:12:32,250 : WARN  : main :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:12:32,251 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:12:32,252 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 11:12:32,252 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:13:00,822 : WARN  : main :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:13:00,824 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:13:00,825 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 11:13:00,826 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:13:01,350 : WARN  : main :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:13:01,351 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:13:01,352 : WARN  : main :  : Node : Scatter Plot (local) : 2:8 : Some columns are ignored: too many/missing nominal values.
+2020-04-06 11:13:01,353 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:13:28,806 : WARN  : KNIME-Worker-17-Column Filter 2:13 :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:23:09,047 : WARN  : main :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:23:09,049 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:23:09,050 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:23:13,112 : WARN  : KNIME-Worker-18-Column Filter 2:13 :  : Node : Color Manager : 2:2 : Selected column "avg_price_binned" with default nominal color mapping.
+2020-04-06 11:25:29,759 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:25:29,759 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:25:30,845 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:25:30,846 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:26:18,348 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:26:18,349 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:26:22,019 : WARN  : KNIME-Worker-20-Partitioning 2:5 :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:26:31,718 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:26:31,719 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:26:33,644 : WARN  : KNIME-Worker-21-Decision Tree Learner 2:6 :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:28:38,610 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:28:38,611 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:28:39,778 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:28:39,779 : WARN  : main :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 11:28:41,664 : WARN  : KNIME-Worker-24-Decision Tree Learner 2:6 :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:32:06,887 : WARN  : KNIME-Worker-26-Decision Tree Predictor 2:7 :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 11:32:06,925 : WARN  : KNIME-Worker-26-Decision Tree Predictor 2:7 :  : Node : Scorer : 2:9 : No columns selected yet.
+2020-04-06 12:23:24,029 : WARN  : main :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 12:23:26,237 : WARN  : KNIME-Worker-30-Partitioning 2:5 :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 12:23:26,297 : WARN  : KNIME-Worker-31-Decision Tree Learner 2:6 :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-06 12:23:26,384 : WARN  : KNIME-Worker-32-Decision Tree Predictor 2:7 :  : DataTableSpec : Decision Tree Predictor : 2:7 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2020-04-09 15:27:57,234 : WARN  : ModalContext :  : Node : File Reader : 0:1 : The file 'file:/C:/Users/906476/My_folder/020%20-%20Cursus/2020-03-01%20-%20Big%20Data/capstone-project/data/combined-data/combined-data.csv' can't be accessed anymore!

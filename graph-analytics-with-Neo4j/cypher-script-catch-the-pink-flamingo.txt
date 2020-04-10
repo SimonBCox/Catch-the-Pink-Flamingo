@@ -1,0 +1,105 @@
+#######################
+# Setting Constraints #
+#######################
+CREATE CONSTRAINT ON (u:User) ASSERT u.id IS UNIQUE; 
+CREATE CONSTRAINT ON (t:Team) ASSERT t.id IS UNIQUE; 
+CREATE CONSTRAINT ON (c:TeamChatSession) ASSERT c.id IS UNIQUE; 
+CREATE CONSTRAINT ON (i:ChatItem) ASSERT i.id IS UNIQUE; 
+
+################
+# Loading Data #
+################
+LOAD CSV FROM "file:/chat-data/chat_CREATE_team_chat.csv" AS row 
+MERGE (u:User {id: toInteger(row[0])})
+MERGE (t:Team {id: toInteger(row[1])}) 
+MERGE (c:TeamChatSession {id: toInteger(row[2])}) 
+MERGE (u)-[:CreatesSession{timeStamp: row[3]}]->(c) 
+MERGE (c)-[:OwnedBy{timeStamp: row[3]}]->(t)
+
+LOAD CSV FROM "file:/chat-data/chat_join_team_chat.csv" AS row 
+MERGE (u:User {id: toInteger(row[0])}) 
+MERGE (c:TeamChatSession {id: toInteger(row[1])}) 
+MERGE (u)-[:Join{timeStamp: row[2]}]->(c)
+
+LOAD CSV FROM "file:/chat-data/chat_leave_team_chat.csv" AS row 
+MERGE (u:User {id: toInteger(row[0])}) 
+MERGE (c:TeamChatSession {id: toInteger(row[1])}) 
+MERGE (u)-[:Leaves{timeStamp: row[2]}]->(c)
+
+LOAD CSV FROM "file:/chat-data/chat_item_team_chat.csv" AS row 
+MERGE (u:User {id: toInteger(row[0])}) 
+MERGE (c:TeamChatSession {id: toInteger(row[1])}) 
+MERGE (i:ChatItem {id: toInteger(row[2])}) 
+MERGE (u)-[:CreateChat{timeStamp: row[3]}]->(i)
+MERGE (i)-[:PartOf{timeStamp: row[3]}]->(c)
+
+LOAD CSV FROM "file:/chat-data/chat_mention_team_chat.csv" AS row 
+MERGE (i:ChatItem {id: toInteger(row[0])}) 
+MERGE (u:User {id: toInteger(row[1])}) 
+MERGE (i)-[:Mentioned{timeStamp: row[2]}]->(u)
+
+LOAD CSV FROM "file:/chat-data/chat_respond_team_chat.csv" AS row 
+MERGE (i:ChatItem {id: toInteger(row[0])}) 
+MERGE (j:ChatItem {id: toInteger(row[1])}) 
+MERGE (i)-[:ResponseTo{timeStamp: row[2]}]->(j)
+
+##############
+# Question 1 #
+##############
+# step 1
+MATCH p=(a)-[:ResponseTo*]->(c)
+RETURN length(p) ORDER BY length(p) DESC LIMIT 1
+# result = 9 pathlength --> 10 chatItems
+
+# step 2
+MATCH path = (a)-[:ResponseTo*9]->(c)
+WITH NODES(path) AS ChatItems
+MATCH (u:User) - [:CreateChat] -> (i:ChatItem)
+WHERE i in ChatItems
+RETURN count(distinct(u))
+# result = 5 Users
+
+##############
+# Question 2 #
+##############
+# step 1
+MATCH (u:User) - [:CreateChat] -> (i:ChatItem)
+RETURN u.id AS UserId, count(i) AS nrOfChats ORDER BY count(i) DESC LIMIT 10
+
+MATCH (i:ChatItem) - [e:PartOf] - (c:TeamChatSession) - [:OwnedBy] -> (t)
+RETURN t.id AS TeamID, count(i) AS nrOfChats ORDER BY count(i) DESC LIMIT 10
+
+MATCH (u:User) - [:CreateChat] - (i:ChatItem) - [:PartOf] - (c:TeamChatSession) - [:OwnedBy] -> (t)
+WITH count(i) AS nr, u.id AS top10Users, t.id AS TeamId
+ORDER BY count(i) DESC 
+LIMIT 10
+RETURN top10Users, TeamId
+
+##############
+# Question 3 #
+##############
+# step a
+MATCH (u1:User) - [:CreateChat] -> (i:ChatItem) - [:Mentioned] -> (u2:User)
+CREATE (u1) - [:InteractsWith] -> (u2)
+
+MATCH (u1:User) - [:CreateChat] -> (i:ChatItem) - [:ResponseTo] -> (i2:ChatItem) <- [:CreateChat] - (u2:User)
+CREATE (u1) - [:InteractsWith] -> (u2)
+
+# step b
+MATCH (u1) - [r:InteractsWith] -> (u1) DELETE r
+
+# step c
+MATCH (u1:User) - [r1:InteractsWith] -> (u2:User)
+WHERE u1.id <> u2.id
+AND u1.id in [ 394, 2067, 1087, 209, 554, 1627, 516, 999, 668, 461 ]
+WITH u1, collect(u2.id) AS neighbors, count(distinct(u2)) AS k
+MATCH (u3:User) - [r2:InteractsWith] -> (u4:User)
+WHERE (u3.id <> u4.id) AND (u3.id IN neighbors) AND (u4.id IN neighbors)
+WITH u1, u3, u4, k,
+CASE 
+	WHEN count(r2) > 0 THEN 1
+	ELSE 0
+END AS value
+RETURN u1.id as UserId, sum(value) as nrOfEdges, k,
+sum(value) * 1.0 /(k * (k - 1)) AS coefficient
+ORDER BY coefficient DESC 

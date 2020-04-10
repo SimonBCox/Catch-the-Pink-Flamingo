@@ -1,0 +1,3 @@
+file:/C:/Users/906476/My_folder/020%20-%20Cursus/2020-03-01%20-%20Big%20Data/capstone-project/data/combined-data/combined-data.csv
+knime://knime.workflow/data.all
+C:\Users\906476\My_folder\020 - Cursus\2020-03-01 - Big Data\capstone-project\data\combined-data\combined-data.csv
